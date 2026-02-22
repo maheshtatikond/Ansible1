@@ -1,6 +1,6 @@
-- name: playlevelvariables
+- name: play level variables
   hosts: local # no need to mention the host name because we are using local connection
-  connections: local #if we use local no need to use user name and pwd
+  connection: local #if we use local no need to use user name and pwd
   vars:
     course: "Devops with AWS"
     Duration: "2 months"
