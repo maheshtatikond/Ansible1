@@ -1,8 +1,14 @@
 - name: install and run nginx
   hosts: web
-  become: yes
+  become: yes # it gives the sudo access to the user or it converts the command as per os
   tasks:
     - name: install nginx
       ansible.builtin.package:
         name: nginx
         state: present
+
+- name: start ngnix
+  anible.builtin.service:
+    name: nginx
+    state: started
+    enabled: yes
