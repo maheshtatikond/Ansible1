@@ -1,0 +1,12 @@
+- name: play level variables
+  hosts: local # no need to mention the host name because we are using local connection
+  connections: local #if we use local no need to use user name and pwd
+  vars:
+    course: "Devops with AWS"
+    Duration: "2 months"
+    Students: "Sai Mahesh Tatikonda"
+  tasks:
+    - name: print play level variables
+      ansible.builtin.debug:
+        msg: "Course: {{course}}, Duration: {{Duration}}, Student: {{Students}}"
+        
